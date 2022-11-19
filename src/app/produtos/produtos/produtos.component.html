@@ -1,0 +1,63 @@
+<table mat-table [dataSource]="produtos" class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="tipo">
+    <th mat-header-cell *matHeaderCellDef> Tipo </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.tipo}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="seguradora">
+    <th mat-header-cell *matHeaderCellDef> Seguradora </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.seguradora}} </td>
+  </ng-container>
+
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="coCorretagem">
+    <th mat-header-cell *matHeaderCellDef> Co-Corretagem </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.coCorretagem}} </td>
+  </ng-container>
+
+
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="dataVigencia">
+    <th mat-header-cell *matHeaderCellDef> Data Vigência </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.dataVigencia}} </td>
+  </ng-container>
+
+
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="valorPremioLiquido">
+    <th mat-header-cell *matHeaderCellDef> Valor Prêmio Liq. </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.valorPremioLiquido}} </td>
+  </ng-container>
+
+
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="comissaoVendaPorcentagem">
+    <th mat-header-cell *matHeaderCellDef> Comissäo Venda (%) </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.comissaoVendaPorcentagem}} </td>
+  </ng-container>
+
+
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="valorComissaoReceber">
+    <th mat-header-cell *matHeaderCellDef> Valor Comissäo a Rec. </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.valorComissaoReceber}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="agenciamentoPorcentagem">
+    <th mat-header-cell *matHeaderCellDef> Agenciamento (%) </th>
+    <td mat-cell *matCellDef="let produto"> {{produto.agenciamentoPorcentagem}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
