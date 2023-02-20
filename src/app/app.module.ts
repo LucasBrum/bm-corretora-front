@@ -33,6 +33,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SeguradoraListComponent } from './components/seguradora/seguradora-list/seguradora-list.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
     HomeComponent,
     HeaderComponent,
     SeguradoraListComponent,
-    ClienteListComponent
+    ClienteListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
