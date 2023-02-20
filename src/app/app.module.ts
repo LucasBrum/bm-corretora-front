@@ -32,6 +32,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SeguradoraListComponent } from './components/seguradora/seguradora-list/seguradora-list.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { SeguradoraListComponent } from './components/seguradora/seguradora-list
     NavComponent,
     HomeComponent,
     HeaderComponent,
-    SeguradoraListComponent
+    SeguradoraListComponent,
+    ClienteListComponent
   ],
   imports: [
     BrowserModule,

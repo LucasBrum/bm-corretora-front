@@ -1,3 +1,4 @@
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { SeguradoraListComponent } from './components/seguradora/seguradora-list/seguradora-list.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,8 @@ const routes: Routes = [
   {
     path: '', component: NavComponent, children: [
       { path: 'home', component: HomeComponent },
-      {path: 'seguradoras', component: SeguradoraListComponent}
+      { path: 'seguradoras', component: SeguradoraListComponent },
+      { path: 'clientes', component: ClienteListComponent }
     ]
   }
 ];
