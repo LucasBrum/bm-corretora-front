@@ -35,6 +35,7 @@ import { SeguradoraListComponent } from './components/seguradora/seguradora-list
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,7 @@ import { ToastrModule } from 'ngx-toastr';
     })
     
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
