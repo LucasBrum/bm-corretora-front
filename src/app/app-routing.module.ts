@@ -1,3 +1,4 @@
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { LoginComponent } from './components/login/login.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { SeguradoraListComponent } from './components/seguradora/seguradora-list/seguradora-list.component';
@@ -13,7 +14,9 @@ const routes: Routes = [
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: 'home', component: HomeComponent },
       { path: 'seguradoras', component: SeguradoraListComponent },
-      { path: 'clientes', component: ClienteListComponent }
+
+      { path: 'clientes', component: ClienteListComponent },
+      { path: 'clientes/create', component: ClienteCreateComponent}
     ]
   }
 ];
