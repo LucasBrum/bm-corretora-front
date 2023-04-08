@@ -15,11 +15,13 @@
 
         <mat-form-field class="fullWidth" appearance="fill">
             <mat-label>CPF</mat-label>
-            <input  
+            <input
+                type="text"
                 [formControl]="cpf" 
                 required 
                 matInput 
-                placeholder="Ex: 000.000.000.-00">
+                placeholder="Ex: 000.000.000-00"
+                mask="000.000.000-00">
             <mat-icon matSuffix>pin</mat-icon>
         </mat-form-field>
 
@@ -29,7 +31,8 @@
                 [formControl]="telefone" 
                 required 
                 matInput 
-                placeholder="Ex: 2199999-9999">
+                placeholder="Ex: 2199999-9999"
+                mask="(00) 00000-0000">
             <mat-icon matSuffix>phone</mat-icon>
         </mat-form-field>
 
@@ -49,7 +52,8 @@
                 [formControl]="dataNascimento" 
                 required 
                 matInput 
-                placeholder="Ex: 29/01/1991">
+                placeholder="Ex: 29/01/1991"
+                mask="00/00/0000">
             <mat-icon matSuffix>calendar_today</mat-icon>
         </mat-form-field>
 
