@@ -28,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 //Componentes do projeto
@@ -79,6 +80,7 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatMenuModule,
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
