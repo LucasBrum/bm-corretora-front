@@ -1,9 +1,4 @@
 <div class="container">
-    <mat-card class="mat-card-title">
-        <mat-card-content>
-            <h1>Clientes</h1>
-        </mat-card-content>
-    </mat-card>
     
     <button routerLink="create" class="mat-elevation-z4" mat-raised-button >
         <i class="material-icons">person_add</i>
@@ -13,9 +8,14 @@
     <mat-form-field>
         <mat-label>Filtro de Busca:</mat-label>
         <input matInput (keyup)="applyFilter($event)" placeholder="Entre com a informação desejada" #input>
-      </mat-form-field>
-
+    </mat-form-field>
+    
     <div class="mat-elevation-z8">
+        <mat-card class="mat-card-title">
+            <mat-card-content>
+                <h1>Clientes</h1>
+            </mat-card-content>
+        </mat-card>
         <table mat-table [dataSource]="dataSource">
 
             <!-- Position Column -->
