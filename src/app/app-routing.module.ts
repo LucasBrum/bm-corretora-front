@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
 import { AuthGuard } from './auth/auth.guard';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,7 +17,8 @@ const routes: Routes = [
       { path: 'seguradoras', component: SeguradoraListComponent },
 
       { path: 'clientes', component: ClienteListComponent },
-      { path: 'clientes/create', component: ClienteCreateComponent}
+      { path: 'clientes/create', component: ClienteCreateComponent},
+      { path: 'clientes/update/:id', component: ClienteUpdateComponent}
     ]
   }
 ];
