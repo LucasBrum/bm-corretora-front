@@ -2,6 +2,10 @@
     height: 100%;
 }
 
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
 .sidenav {
     width: 13rem;
     color: white;
@@ -24,7 +28,16 @@ img {
 }
 
 .menu {
-    margin: 1rem 0 0 1rem;
+    margin: 0rem 0 0 0rem;
     color: white;
     background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(62,151,255,1) 100%);
 }
+
+.toolbar {
+    margin: 0rem 0 0 0rem;
+    color: white;
+    background: radial-gradient(circle, rgba(0,168,255,1) 0%, rgba(0,229,233,1) 50%, rgba(0,110,255,1) 100%);
+
+}
+
+

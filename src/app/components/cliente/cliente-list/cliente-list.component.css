@@ -4,7 +4,10 @@
 }
 
 .mat-card-title {
-    background: linear-gradient(90deg, rgba(0,138,255,1) 0%, rgba(0,255,244,1) 51%, rgba(0,113,240,1) 98%);}
+    padding: 15px;
+    background: radial-gradient(circle, rgba(232,233,233,1) 0%, rgba(153,253,255,1) 50%, rgba(200,219,244,1) 100%);
+
+}
 
 h1 {
     width: 100%;
@@ -13,13 +16,15 @@ h1 {
 }
 
 button {
-    width: 100%;
+    float: right;
+    margin-top: 1rem;
+    width: 65%;
     background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(62,151,255,1) 100%);
 }
 
 
 mat-form-field {
-    width: 100%;
+    width: 30%;
 }
 
 table {
