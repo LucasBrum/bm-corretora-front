@@ -3,6 +3,38 @@
     margin: auto;
 }
 
+.mat-card-title {
+    padding: 15px;
+    background: radial-gradient(circle, rgba(232,233,233,1) 0%, rgba(153,253,255,1) 50%, rgba(200,219,244,1) 100%);
+
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    float: right;
+    margin-top: 1rem;
+    width: 65%;
+    background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(62,151,255,1) 100%);
+}
+
+
+mat-form-field {
+    width: 30%;
+}
+
 table {
     width: 100%;
+}
+
+.edit {
+    color: rgb(0, 81, 255);
+}
+
+.delete {
+    color: red;
 }

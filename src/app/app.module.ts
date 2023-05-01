@@ -42,6 +42,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { SeguradoraUpdateComponent } from './components/seguradora/seguradora-update/seguradora-update.component';
+import { SeguradoraCreateComponent } from './components/seguradora/seguradora-create/seguradora-create.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
     ClienteListComponent,
     LoginComponent,
     ClienteCreateComponent,
-    ClienteUpdateComponent
+    ClienteUpdateComponent,
+    SeguradoraUpdateComponent,
+    SeguradoraCreateComponent
   ],
   imports: [
 
