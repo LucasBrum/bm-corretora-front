@@ -3,8 +3,18 @@
     margin: auto;
 }
 
+.card-opcoes {
+    background: rgb(255, 245, 245);
+}
+
+.btn-create {
+    color: white;
+}
+
+
 .mat-card-title {
-    padding: 15px;
+    color: rgb(95, 133, 238);
+    padding: 2px;
     background: radial-gradient(circle, rgba(232,233,233,1) 0%, rgba(153,253,255,1) 50%, rgba(200,219,244,1) 100%);
 
 }
@@ -16,15 +26,14 @@ h1 {
 }
 
 button {
-    float: right;
     margin-top: 1rem;
-    width: 65%;
+    width: 100%;
     background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(62,151,255,1) 100%);
 }
 
 
 mat-form-field {
-    width: 30%;
+    width: 100%;
 }
 
 table {

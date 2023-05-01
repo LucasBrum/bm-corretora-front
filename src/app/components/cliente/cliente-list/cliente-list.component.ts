@@ -11,6 +11,8 @@ import { Cliente } from 'src/app/models/cliente';
 })
 export class ClienteListComponent implements OnInit {
   
+  panelOpenState = false;
+
   ELEMENT_DATA: Cliente[] = []
   
   displayedColumns: string[] = ['nome', 'cpf', 'email', 'telefone', 'dataNascimento', 'acoes'];

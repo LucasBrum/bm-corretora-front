@@ -1,14 +1,17 @@
 <div class="container">
-    
-    <button routerLink="create" class="mat-elevation-z4" mat-raised-button >
-        <i class="material-icons">person_add</i>
-        Novo Cliente
-    </button>
 
-    <mat-form-field>
-        <mat-label>Filtro de Busca:</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="Entre com a informação desejada" #input>
-    </mat-form-field>
+    <mat-card class="mat-elevation-z8 card-opcoes">
+        <button routerLink="create" class="mat-elevation-z4 btn-create" mat-raised-button >
+            <i class="material-icons">person_add</i>
+            Novo Cliente
+        </button>
+
+        <mat-form-field>
+            <mat-label>Filtro de Busca:</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Entre com a informação desejada" #input>
+        </mat-form-field>
+
+    </mat-card>
     
     <div class="mat-elevation-z8">
         <mat-card class="mat-card-title">
@@ -16,6 +19,7 @@
                 <h1>Clientes</h1>
             </mat-card-content>
         </mat-card>
+        
         <table mat-table [dataSource]="dataSource">
 
             <!-- Position Column -->
