@@ -13,7 +13,7 @@ export class ClienteListComponent implements OnInit {
   
   panelOpenState = false;
 
-  ELEMENT_DATA: Cliente[] = []
+  ELEMENT_DATA: Cliente[] = [];
   
   displayedColumns: string[] = ['nome', 'cpf', 'email', 'telefone', 'dataNascimento', 'acoes'];
   dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
