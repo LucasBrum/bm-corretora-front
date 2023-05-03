@@ -45,6 +45,7 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { SeguradoraUpdateComponent } from './components/seguradora/seguradora-update/seguradora-update.component';
 import { SeguradoraCreateComponent } from './components/seguradora/seguradora-create/seguradora-create.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { SeguradoraCreateComponent } from './components/seguradora/seguradora-cr
     ClienteCreateComponent,
     ClienteUpdateComponent,
     SeguradoraUpdateComponent,
-    SeguradoraCreateComponent
+    SeguradoraCreateComponent,
+    ClienteDeleteComponent
   ],
   imports: [
 

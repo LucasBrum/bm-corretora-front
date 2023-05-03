@@ -15,7 +15,7 @@ export class SeguradoraListComponent implements OnInit {
 
   ELEMENT_DATA: Seguradora[] = [];
 
-  displayedColumns: string[] = ['nome', 'acoes'];
+  displayedColumns: string[] = ['nome'];
   dataSource = new MatTableDataSource<Seguradora>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
