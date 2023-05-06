@@ -46,6 +46,8 @@ import { ClienteUpdateComponent } from './components/cliente/cliente-update/clie
 import { SeguradoraUpdateComponent } from './components/seguradora/seguradora-update/seguradora-update.component';
 import { SeguradoraCreateComponent } from './components/seguradora/seguradora-create/seguradora-create.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
+import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { ClienteDeleteComponent } from './components/cliente/cliente-delete/clie
     ClienteUpdateComponent,
     SeguradoraUpdateComponent,
     SeguradoraCreateComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    ProdutoCreateComponent,
+    ProdutoListComponent
   ],
   imports: [
 

@@ -11,6 +11,8 @@ import { AuthGuard } from './auth/auth.guard';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { SeguradoraCreateComponent } from './components/seguradora/seguradora-create/seguradora-create.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
+import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -25,6 +27,9 @@ const routes: Routes = [
       { path: 'clientes/create', component: ClienteCreateComponent},
       { path: 'clientes/update/:id', component: ClienteUpdateComponent},
       { path: 'clientes/delete/:id', component: ClienteDeleteComponent},
+
+      { path: 'produtos', component: ProdutoListComponent},
+      { path: 'produtos/create', component: ProdutoCreateComponent}
 
 
     ]

@@ -14,7 +14,7 @@
 
 .mat-card-title {
     color: rgb(95, 133, 238);
-    padding: 2px;
+    padding: 0px;
     background: radial-gradient(circle, rgba(232,233,233,1) 0%, rgba(153,253,255,1) 50%, rgba(200,219,244,1) 100%);
 
 }
