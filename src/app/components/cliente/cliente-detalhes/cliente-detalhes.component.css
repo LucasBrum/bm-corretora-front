@@ -1,12 +1,13 @@
 .container {
-    width: 90%;
+    width: 60%;
     margin: auto;
 }
 
-.card-opcoes {
-    background: rgb(255, 245, 245);
+.toolbar {
+    background: linear-gradient(90deg, rgb(48, 179, 219) 0%, rgb(182, 216, 255) 100%);
+    color: white;
+    height: 35px;
 }
-
 .mat-card-title {
     color: rgb(95, 133, 238);
     padding: 0px;

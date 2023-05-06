@@ -40,8 +40,7 @@ import { SeguradoraCreateComponent } from './components/seguradora/seguradora-cr
 import { SeguradoraListComponent } from './components/seguradora/seguradora-list/seguradora-list.component';
 import { SeguradoraUpdateComponent } from './components/seguradora/seguradora-update/seguradora-update.component';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
-import { DialogProdutoClienteComponent } from './components/produto/dialog-produto-cliente/dialog-produto-cliente.component';
-import { RouterModule } from '@angular/router';
+import { ClienteDetalhesComponent } from './components/cliente/cliente-detalhes/cliente-detalhes.component';
 
 // Para trabalhar com formulários no Angular 12
 // Para realizar requisições HTTP
@@ -66,7 +65,7 @@ import { RouterModule } from '@angular/router';
     ClienteDeleteComponent,
     ProdutoCreateComponent,
     ProdutoListComponent,
-    DialogProdutoClienteComponent
+    ClienteDetalhesComponent
   ],
   imports: [
 
@@ -107,6 +106,5 @@ import { RouterModule } from '@angular/router';
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent],
-  entryComponents: [DialogProdutoClienteComponent]
 })
 export class AppModule { }

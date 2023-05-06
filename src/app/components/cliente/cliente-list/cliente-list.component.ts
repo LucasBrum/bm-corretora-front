@@ -1,15 +1,12 @@
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ClienteService } from './../../../services/cliente.service';
-import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Cliente } from 'src/app/models/cliente';
-import { ProdutoListComponent } from '../../produto/produto-list/produto-list.component';
-import { DialogProdutoClienteComponent } from '../../produto/dialog-produto-cliente/dialog-produto-cliente.component';
-import { ProdutoService } from 'src/app/services/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Produto } from 'src/app/models/produto';
 
 @Component({
   selector: 'app-cliente-list',
@@ -17,15 +14,31 @@ import { takeUntil } from 'rxjs/operators';
   styleUrls: ['./cliente-list.component.css']
 })
 export class ClienteListComponent implements OnInit {
+  
   currentDialog = null;
   destroy = new Subject<any>();
 
   panelOpenState = false;
 
-  ELEMENT_DATA: Cliente[] = [];
+  ELEMENT_DATA_CLIENTE: Cliente[] = [];
+  ELEMENT_DATA_PRODUTO_CLIENTE: Produto[] = [];
+
+  displayedOProdutoColumns: string[] = [
+    'tipo', 
+    'seguradora',
+    'coCorretagem',
+    'dataVigencia',
+    'valorPremioLiquido',
+    'comissaoVendaPorcentagem',
+    'valorComissaoReceber',
+    'agenciamentoPorcentagem',
+    'nomeCliente',
+    'acoes'];
+  dataSourceProduto = new MatTableDataSource<Produto>(this.ELEMENT_DATA_PRODUTO_CLIENTE);
   
   displayedColumns: string[] = ['nome', 'cpf', 'email', 'telefone', 'dataNascimento', 'acoes'];
-  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+  dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA_CLIENTE);
+
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
   
@@ -43,35 +56,11 @@ export class ClienteListComponent implements OnInit {
     this.findAll(); 
   }
 
-  // openDialog() {
-  //   this.route.params.pipe(takeUntil(this.destroy))
-  //   .subscribe(params => {
-  //     if(this.currentDialog) {
-  //       this.currentDialog.close();
-  //     }
-
-  //     this.currentDialog = this.dialog.open(DialogProdutoClienteComponent, {
-  //       data: { id: params.id }
-  //     });
-  //     this.currentDialog.afterClosed().subscribe(result => {
-  //       console.log('The dialog was closed');
-  //       this.router.navigateByUrl('/');
-  //     })
-  //   })
-  // }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(DialogProdutoClienteComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
 
   findAll() {
     this.clienteService.findAll().subscribe(response => {
-      this.ELEMENT_DATA = response;
-      this.dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA);
+      this.ELEMENT_DATA_CLIENTE = response;
+      this.dataSource = new MatTableDataSource<Cliente>(this.ELEMENT_DATA_CLIENTE);
       this.dataSource.paginator = this.paginator;
     })
   }

@@ -1,5 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente';
@@ -7,11 +6,11 @@ import { Produto } from 'src/app/models/produto';
 import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
-  selector: 'app-dialog-produto-cliente',
-  templateUrl: './dialog-produto-cliente.component.html',
-  styleUrls: ['./dialog-produto-cliente.component.css']
+  selector: 'app-cliente-detalhes',
+  templateUrl: './cliente-detalhes.component.html',
+  styleUrls: ['./cliente-detalhes.component.css']
 })
-export class DialogProdutoClienteComponent implements OnInit {
+export class ClienteDetalhesComponent implements OnInit {
 
   cliente: Cliente = {
     id: '',
@@ -32,31 +31,24 @@ export class DialogProdutoClienteComponent implements OnInit {
     'valorPremioLiquido',
     'comissaoVendaPorcentagem',
     'valorComissaoReceber',
-    'agenciamentoPorcentagem',
-    'nomeCliente',
-    'acoes'];
+    'agenciamentoPorcentagem'
+  ];
   dataSource = new MatTableDataSource<Produto>(this.ELEMENT_DATA);
   
   constructor(
-    
-    private dialog: MatDialogRef<DialogProdutoClienteComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
     private produtoService: ProdutoService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private activatedRoute: ActivatedRoute
   ) {
-    console.log('Injected data', data);
    }
 
   ngOnInit(): void {
-    this.cliente.id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.cliente.id = this.activatedRoute.snapshot.paramMap.get('id'); // Pega o id no parâmetro da URL
     this.findProdutosbyIdCliente(this.cliente.id);
+    console.log("This Data Source Produtos: ", this.dataSource)
   }
 
-  
-
   findProdutosbyIdCliente(id: any) {
-    console.log(this.cliente.id);
     this.produtoService.findProdutosbyIdCliente(this.cliente.id).subscribe(response => {
       this.ELEMENT_DATA = response;
       this.dataSource = new MatTableDataSource<Produto>(this.ELEMENT_DATA);

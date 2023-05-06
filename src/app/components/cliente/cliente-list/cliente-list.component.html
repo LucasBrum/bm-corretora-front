@@ -60,7 +60,7 @@
                     <a routerLink="delete/{{ element.id }}">
                         <i class="material-icons delete">delete</i>
                     </a>
-                    <a routerLink="../produtos/cliente/{{ element.id }}" (click)="openDialog()">
+                    <a routerLink="../produtos/cliente/{{ element.id }}" >
                         <i class="material-icons listar-produtos" matTooltip="Listar Produtos">dvr</i>
                     </a>
                 </td>
@@ -70,7 +70,7 @@
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
 
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+        <mat-paginator [pageSizeOptions]="[10, 20, 50]" showFirstLastButtons
             aria-label="Select page of periodic elements">
         </mat-paginator>
     </div>

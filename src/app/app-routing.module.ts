@@ -13,7 +13,7 @@ import { SeguradoraCreateComponent } from './components/seguradora/seguradora-cr
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
-import { DialogProdutoClienteComponent } from './components/produto/dialog-produto-cliente/dialog-produto-cliente.component';
+import { ClienteDetalhesComponent } from './components/cliente/cliente-detalhes/cliente-detalhes.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -30,7 +30,7 @@ const routes: Routes = [
       { path: 'clientes/delete/:id', component: ClienteDeleteComponent},
 
       { path: 'produtos', component: ProdutoListComponent},
-      { path: 'produtos/cliente/:id', component: ClienteListComponent},
+      { path: 'produtos/cliente/:id', component: ClienteDetalhesComponent},
       { path: 'produtos/create', component: ProdutoCreateComponent},
 
 
