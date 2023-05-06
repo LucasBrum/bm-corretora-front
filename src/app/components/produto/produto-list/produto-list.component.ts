@@ -1,6 +1,9 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute } from '@angular/router';
+import { Cliente } from 'src/app/models/cliente';
 import { Produto } from 'src/app/models/produto';
 import { ProdutoService } from 'src/app/services/produto.service';
 
@@ -35,11 +38,13 @@ export class ProdutoListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   
   constructor(
-    private produtoService: ProdutoService
+    
+    private produtoService: ProdutoService,
+    private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    this.findAll(); 
+    this.findAll();
   }
 
   findAll() {
@@ -54,5 +59,7 @@ export class ProdutoListComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+  
 
 }

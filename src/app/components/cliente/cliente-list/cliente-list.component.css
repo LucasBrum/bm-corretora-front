@@ -7,13 +7,8 @@
     background: rgb(255, 245, 245);
 }
 
-.btn-create {
-    color: white;
-}
-
-
 .mat-card-title {
-    color: rgb(95, 133, 238);
+    color: #4C6085;
     padding: 2px;
     background: radial-gradient(circle, rgba(232,233,233,1) 0%, rgba(153,253,255,1) 50%, rgba(200,219,244,1) 100%);
 
@@ -26,11 +21,11 @@ h1 {
 }
 
 button {
+    color:white;
     margin-top: 1rem;
     width: 100%;
     background: linear-gradient(90deg, rgba(0,194,255,1) 0%, rgba(62,151,255,1) 100%);
 }
-
 
 mat-form-field {
     width: 100%;
@@ -48,7 +43,7 @@ tr.mat-header-row {
 
 
 th {
-    background:  rgb(0, 152, 199);
+    background:  #39A0ED;
     color: white;
 }
 
@@ -73,9 +68,13 @@ tr.mat-row {
 }
 
 .edit {
-    color: rgb(0, 81, 255);
+    color: #39A0ED;
 }
 
 .delete {
-    color: red;
+    color: rgb(255, 45, 45);
+}
+
+.listar-produtos {
+    color: #13C4A3;
 }

@@ -1,10 +1,8 @@
-import { Observable } from 'rxjs';
 import { SeguradoraService } from './../../../services/seguradora.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Seguradora } from 'src/app/models/seguradora';
-import { API_CONFIG } from 'src/app/config/api.config';
 
 @Component({
   selector: 'app-seguradora-list',

@@ -1,54 +1,55 @@
-import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatDialogModule} from '@angular/material/dialog';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMaskModule } from 'ngx-mask';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavComponent } from './components/nav/nav.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
+import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
+import { SeguradoraCreateComponent } from './components/seguradora/seguradora-create/seguradora-create.component';
+import { SeguradoraListComponent } from './components/seguradora/seguradora-list/seguradora-list.component';
+import { SeguradoraUpdateComponent } from './components/seguradora/seguradora-update/seguradora-update.component';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { DialogProdutoClienteComponent } from './components/produto/dialog-produto-cliente/dialog-produto-cliente.component';
+import { RouterModule } from '@angular/router';
 
 // Para trabalhar com formulários no Angular 12
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-
 // Para realizar requisições HTTP
-import { HttpClientModule } from '@angular/common/http';
-
 
 // Imports para componentes do Angular Material
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTableModule } from '@angular/material/table';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatExpansionModule} from '@angular/material/expansion';
 
 
 //Componentes do projeto
-import { NavComponent } from './components/nav/nav.component';
-import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './components/header/header.component';
-import { SeguradoraListComponent } from './components/seguradora/seguradora-list/seguradora-list.component';
-import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
-import { LoginComponent } from './components/login/login.component';
-import { ToastrModule } from 'ngx-toastr';
-import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
-import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
-import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
-import { SeguradoraUpdateComponent } from './components/seguradora/seguradora-update/seguradora-update.component';
-import { SeguradoraCreateComponent } from './components/seguradora/seguradora-create/seguradora-create.component';
-import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
-import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
-import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +65,8 @@ import { ProdutoListComponent } from './components/produto/produto-list/produto-
     SeguradoraCreateComponent,
     ClienteDeleteComponent,
     ProdutoCreateComponent,
-    ProdutoListComponent
+    ProdutoListComponent,
+    DialogProdutoClienteComponent
   ],
   imports: [
 
@@ -88,6 +90,8 @@ import { ProdutoListComponent } from './components/produto/produto-list/produto-
     MatInputModule,
     MatRadioModule,
     MatTableModule,
+    MatTooltipModule,
+    MatDialogModule,
     MatIconModule,
     MatListModule,
     MatCardModule,
@@ -102,6 +106,7 @@ import { ProdutoListComponent } from './components/produto/produto-list/produto-
     
   ],
   providers: [AuthInterceptorProvider],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogProdutoClienteComponent]
 })
 export class AppModule { }

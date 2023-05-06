@@ -60,6 +60,9 @@
                     <a routerLink="delete/{{ element.id }}">
                         <i class="material-icons delete">delete</i>
                     </a>
+                    <a routerLink="../produtos/cliente/{{ element.id }}" (click)="openDialog()">
+                        <i class="material-icons listar-produtos" matTooltip="Listar Produtos">dvr</i>
+                    </a>
                 </td>
             </ng-container>
 

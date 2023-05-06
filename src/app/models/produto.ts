@@ -1,5 +1,5 @@
 export interface Produto {
-    id:                         any;
+    id?:                         any;
     tipo:                       string;
     seguradora:                 string;
     coCorretagem:               boolean;
