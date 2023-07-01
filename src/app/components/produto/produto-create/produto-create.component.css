@@ -5,8 +5,22 @@
     border-radius: 1rem;
 }
 
+.section-cocorretagem {
+    margin: 12px 0;
+}
+
+.checkbox-cocorretagem {
+    margin: 0 12px;
+} 
+
 .fullWidth {
     width: 100%;
+}
+
+.mediumWidth {
+    width: 30%;
+    margin: 0px 5px 0px 0px;
+
 }
 
 h1 {

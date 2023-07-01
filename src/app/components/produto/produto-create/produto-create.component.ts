@@ -13,6 +13,7 @@ import { ProdutoService } from 'src/app/services/produto.service';
 })
 export class ProdutoCreateComponent implements OnInit {
 
+  checked = false;
   categoriasProduto: CategoriaProduto[] = [];
 
   produto: Produto = {

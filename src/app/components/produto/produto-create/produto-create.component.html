@@ -2,9 +2,10 @@
     <form class="form">
         <h1 class="fullWidth">Cadastrar Produto</h1>
 
+
         <div class="tipo-seguro">
-            <mat-form-field appearance="fill">
-                <mat-label>Selecione o tipo de Seguro</mat-label>
+            <mat-form-field class="fullWidth" appearance="fill">
+                <mat-label>Selecione a Categoria do Seguro</mat-label>
                 <mat-select>
                     <mat-option *ngFor="let categoriaProduto of categoriasProduto" [value]="categoriaProduto">
                         {{categoriaProduto}}
@@ -13,16 +14,58 @@
             </mat-form-field>
         </div>
 
+        <section class="section-cocorretagem">
+            <mat-checkbox class="checkbox-cocorretagem">Co-corretagem</mat-checkbox>
+        </section>
+
         <mat-form-field class="fullWidth" appearance="fill">
-            <mat-label>Tipo do Produto</mat-label>
+            <mat-label>Seguradora</mat-label>
             <input 
-                [(ngModel)]="produto.tipo"
+                [(ngModel)]="produto.seguradora"
                 name="nome"
-                [formControl]="tipo" 
+                [formControl]="seguradora" 
                 required 
                 matInput 
-                placeholder="Ex: Paulo de Tarso">
-            <mat-icon matSuffix>person</mat-icon>
+                placeholder="SUHAI">
+            <mat-icon matSuffix>business</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Fim da Vigência</mat-label>
+            <input 
+                [(ngModel)]="produto.dataVigencia"
+                name="dataVigencia"
+                [formControl]="dataVigencia" 
+                required 
+                matInput 
+                placeholder="Ex: 29/01/2025"
+                [dropSpecialCharacters]="false"
+                mask="00/00/0000">
+            <mat-icon matSuffix>calendar_today</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Prêmio Liquído (R$)</mat-label>
+            <input 
+                [(ngModel)]="produto.valorPremioLiquido"
+                name="nome"
+                [formControl]="valorPremioLiquido" 
+                required 
+                matInput 
+                placeholder="SUHAI">
+            <mat-icon matSuffix>monetization_on</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Comissão Venda (%)</mat-label>
+            <input 
+                [(ngModel)]="produto.comissaoVendaPorcentagem"
+                name="nome"
+                [formControl]="comissaoVendaPorcentagem" 
+                required 
+                matInput 
+                placeholder="SUHAI">
+            <mat-icon matSuffix>monetization_on</mat-icon>
         </mat-form-field>
 
     </form>
