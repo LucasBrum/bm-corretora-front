@@ -2,6 +2,16 @@
     <form class="form">
         <h1 class="fullWidth">Cadastrar Produto</h1>
 
+        <div class="cliente-select">
+            <mat-form-field class="fullWidth" appearance="fill">
+                <mat-label>Selecione o Cliente</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let cliente of clientes" [value]="cliente">
+                        {{cliente.nome}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
 
         <div class="tipo-seguro">
             <mat-form-field class="fullWidth" appearance="fill">
@@ -62,6 +72,30 @@
                 [(ngModel)]="produto.comissaoVendaPorcentagem"
                 name="nome"
                 [formControl]="comissaoVendaPorcentagem" 
+                required 
+                matInput 
+                placeholder="SUHAI">
+            <mat-icon matSuffix>monetization_on</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Valor Comissão a Receber (R$)</mat-label>
+            <input 
+                [(ngModel)]="produto.valorComissaoReceber"
+                name="nome"
+                [formControl]="valorComissaoReceber" 
+                required 
+                matInput 
+                placeholder="SUHAI">
+            <mat-icon matSuffix>monetization_on</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="fill">
+            <mat-label>Agenciamento</mat-label>
+            <input 
+                [(ngModel)]="produto.agenciamentoPorcentagem"
+                name="nome"
+                [formControl]="agenciamentoPorcentagem" 
                 required 
                 matInput 
                 placeholder="SUHAI">
