@@ -29,6 +29,7 @@ export class ProdutoCreateComponent implements OnInit {
     comissaoVendaPorcentagem: null,
     valorComissaoReceber: null,
     agenciamentoPorcentagem: null,
+    numeroApolice: null,
     nomeCliente: ''
   }
 
@@ -40,6 +41,7 @@ export class ProdutoCreateComponent implements OnInit {
   comissaoVendaPorcentagem: FormControl = new FormControl(null, Validators.required);
   valorComissaoReceber: FormControl = new FormControl(null, Validators.required);
   agenciamentoPorcentagem: FormControl = new FormControl(null, Validators.required);
+  numeroApolice: FormControl = new FormControl(null, Validators.required);
   nomeCliente: FormControl = new FormControl(null, Validators.required);
 
 

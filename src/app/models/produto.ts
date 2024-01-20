@@ -8,5 +8,6 @@ export interface Produto {
     comissaoVendaPorcentagem:   number;
     valorComissaoReceber:       number;
     agenciamentoPorcentagem:    number;
+    numeroApolice:              number;
     nomeCliente:                string;
 }

@@ -24,6 +24,20 @@
             </mat-form-field>
         </div>
 
+        <div class="numero-apolice">
+            <mat-form-field class="fullWidth" appearance="fill">
+                <mat-label>Número da Apólice</mat-label>
+                <input 
+                    [(ngModel)]="produto.numeroApolice"
+                    name="numeroApolice"
+                    [formControl]="numeroApolice" 
+                    required 
+                    matInput 
+                    >
+                <mat-icon matSuffix>assignment</mat-icon>
+            </mat-form-field>
+        </div>
+
         <section class="section-cocorretagem">
             <mat-checkbox class="checkbox-cocorretagem">Co-corretagem</mat-checkbox>
         </section>
@@ -32,11 +46,11 @@
             <mat-label>Seguradora</mat-label>
             <input 
                 [(ngModel)]="produto.seguradora"
-                name="nome"
+                name="seguradora"
                 [formControl]="seguradora" 
                 required 
                 matInput 
-                placeholder="SUHAI">
+                >
             <mat-icon matSuffix>business</mat-icon>
         </mat-form-field>
 
@@ -62,7 +76,7 @@
                 [formControl]="valorPremioLiquido" 
                 required 
                 matInput 
-                placeholder="SUHAI">
+                >
             <mat-icon matSuffix>monetization_on</mat-icon>
         </mat-form-field>
 
@@ -74,7 +88,7 @@
                 [formControl]="comissaoVendaPorcentagem" 
                 required 
                 matInput 
-                placeholder="SUHAI">
+                >
             <mat-icon matSuffix>monetization_on</mat-icon>
         </mat-form-field>
 
@@ -86,7 +100,7 @@
                 [formControl]="valorComissaoReceber" 
                 required 
                 matInput 
-                placeholder="SUHAI">
+                >
             <mat-icon matSuffix>monetization_on</mat-icon>
         </mat-form-field>
 
@@ -98,7 +112,7 @@
                 [formControl]="agenciamentoPorcentagem" 
                 required 
                 matInput 
-                placeholder="SUHAI">
+                >
             <mat-icon matSuffix>monetization_on</mat-icon>
         </mat-form-field>
 
